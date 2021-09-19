@@ -1,16 +1,11 @@
 import { Chat } from '@livestorm/plugin'
+const Filter = require('bad-words'), filter = new Filter();
+const frenchBadwords = require('french-badwords-list');
+filter.addWords(...frenchBadwords.array);
 
 export default function() {
-  function replaceFromString(words, string) {
-    return words.reduce((result, word) => result.replace(word, '****'), string)
-  };
-  function matchWords(string, regex) {
-    return string.match(regex)
-  };
-  const insultRegex = /fuck|bite/ig;
-  Chat.intercept(insultRegex, (message) => {
-    const insultList = matchWords(message.content, insultRegex);
-    const filteredMessage = replaceFromString(insultList, message.content);
+  Chat.intercept(/.*/, (message) => {
+    const filteredMessage = filter.clean(message.content);
     Chat.broadcast({ text: `${filteredMessage}` });
   })
 }

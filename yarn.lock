@@ -1111,6 +1111,18 @@ babel-preset-jest@^26.6.2:
     babel-plugin-jest-hoist "^26.6.2"
     babel-preset-current-node-syntax "^1.0.0"
 
+bad-words@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/bad-words/-/bad-words-3.0.4.tgz#044c83935c4c363a905d47b5e0179f7241fecaec"
+  integrity sha512-v/Q9uRPH4+yzDVLL4vR1+S9KoFgOEUl5s4axd6NIAq8SV2mradgi4E8lma/Y0cw1ltVdvyegCQQKffCPRCp8fg==
+  dependencies:
+    badwords-list "^1.0.0"
+
+badwords-list@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/badwords-list/-/badwords-list-1.0.0.tgz#5e9856dbf13482a295c3b0b304afb9d4cfc5c579"
+  integrity sha1-XphW2/E0gqKVw7CzBK+51M/FxXk=
+
 balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
@@ -2020,6 +2032,11 @@ fragment-cache@^0.2.1:
   integrity sha1-QpD60n8T6Jvn8zeZxrxaCr//DRk=
   dependencies:
     map-cache "^0.2.2"
+
+french-badwords-list@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/french-badwords-list/-/french-badwords-list-1.0.5.tgz#acd35c950f8cd64dd99ab4f5ac9dfb133966f791"
+  integrity sha512-MZ4tpLH+GNlFEx62RLZAttE/ZvmYf42M3MFwh9QK/l4TV6WgZWy1bx4xI3z9mjuLh5GWQQ5jLOx8BFUAwt99tw==
 
 fs.realpath@^1.0.0:
   version "1.0.0"
